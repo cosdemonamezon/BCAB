@@ -82,21 +82,6 @@ class _LoginPageState extends State<LoginPage> {
           shrinkWrap: true,
           padding: EdgeInsets.only(left: 24.0, right: 24.0),
           children: <Widget>[
-            Image.asset(
-              'assets/alucard.jpg',
-              width: 100.0,
-              height: 100.0,
-            ),
-            Image.asset(
-              'assets/logo.png',
-              width: 100.0,
-              height: 100.0,
-            ),
-            Image.asset(
-              'assets/logo.png',
-              width: 100.0,
-              height: 100.0,
-            ),
             logo,
             SizedBox(height: 128.0),
             email,

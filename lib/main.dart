@@ -5,6 +5,7 @@ import 'news_tab.dart';
 import 'profile_tab.dart';
 import 'settings_tab.dart';
 import 'songs_tab.dart';
+import 'avatar_tab.dart';
 import 'widgets.dart';
 import 'login_page.dart';
 
@@ -113,6 +114,11 @@ class _PlatformAdaptingHomePageState extends State<PlatformAdaptingHomePage> {
               defaultTitle: ProfileTab.title,
               builder: (context) => ProfileTab(),
             );
+          case 2:
+            return CupertinoTabView(
+              defaultTitle: ProfileTab.title,
+              builder: (context) => AvatarTab(),
+            );
           default:
             assert(false, 'Unexpected tab');
             return null;
@@ -147,6 +153,20 @@ class _AndroidDrawer extends StatelessWidget {
                 size: 96,
               ),
             ),
+          ),
+          ListTile(
+            leading: AvatarTab.androidIcon,
+            title: Text(AvatarTab.title),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push<void>(context,
+                  MaterialPageRoute(builder: (context) => AvatarTab()));
+            },
+          ),
+          // Long drawer contents are often segmented.
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Divider(),
           ),
           ListTile(
             leading: SongsTab.androidIcon,
