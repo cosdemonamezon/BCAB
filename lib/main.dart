@@ -1,3 +1,4 @@
+import 'package:BCAB/dashboard_tap.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -119,6 +120,11 @@ class _PlatformAdaptingHomePageState extends State<PlatformAdaptingHomePage> {
               defaultTitle: ProfileTab.title,
               builder: (context) => AvatarTab(),
             );
+            case 3:
+            return CupertinoTabView(
+              defaultTitle: ProfileTab.title,
+              builder: (context) => Dashboard(),
+            );
           default:
             assert(false, 'Unexpected tab');
             return null;
@@ -153,6 +159,15 @@ class _AndroidDrawer extends StatelessWidget {
                 size: 96,
               ),
             ),
+          ),
+          ListTile(
+            leading: Icon(Icons.dashboard),
+            title: Text("Dashboard"),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push<void>(context,
+                  MaterialPageRoute(builder: (context) => Dashboard()));
+            },
           ),
           ListTile(
             leading: AvatarTab.androidIcon,
