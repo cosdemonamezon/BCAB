@@ -30,10 +30,10 @@ class AvatarTabState extends State<AvatarTab> {
               children: <Widget>[
                 // Max Size
                 Container(
-                  height: 290.0,
-                  width: 290.0,
+                  height: 300.0,
+                  width: 300.0,
                   child: Image.asset(
-                    'assets/head' + h + '.png',
+                    'assets/h' + h + '.png',
                     width: 100.0,
                     height: 100.0,
                   ),
@@ -42,7 +42,7 @@ class AvatarTabState extends State<AvatarTab> {
                   height: 300.0,
                   width: 300.0,
                   child: Image.asset(
-                    'assets/body' + sh + '.png',
+                    'assets/s' + sh + '.png',
                     width: 100.0,
                     height: 100.0,
                   ),
@@ -72,7 +72,7 @@ class AvatarTabState extends State<AvatarTab> {
                               });
                             },
                             child: Ink.image(
-                              image: AssetImage('assets/head1.png'),
+                              image: AssetImage('assets/h1.png'),
                               // fit: BoxFit.cover,
                               width: 110,
                               height: 110,
@@ -93,7 +93,7 @@ class AvatarTabState extends State<AvatarTab> {
                             });
                           },
                           child: Ink.image(
-                            image: AssetImage('assets/head2.png'),
+                            image: AssetImage('assets/h2.png'),
                             // fit: BoxFit.cover,
                             width: 110,
                             height: 110,
@@ -115,7 +115,7 @@ class AvatarTabState extends State<AvatarTab> {
                             });
                           },
                           child: Ink.image(
-                            image: AssetImage('assets/head3.png'),
+                            image: AssetImage('assets/h3.png'),
                             // fit: BoxFit.cover,
                             width: 110,
                             height: 110,
@@ -137,7 +137,7 @@ class AvatarTabState extends State<AvatarTab> {
                             });
                           },
                           child: Ink.image(
-                            image: AssetImage('assets/head4.png'),
+                            image: AssetImage('assets/h4.png'),
                             // fit: BoxFit.cover,
                             width: 110,
                             height: 110,
@@ -169,7 +169,7 @@ class AvatarTabState extends State<AvatarTab> {
                             });
                           },
                           child: Ink.image(
-                            image: AssetImage('assets/body1.png'),
+                            image: AssetImage('assets/s1.png'),
                             // fit: BoxFit.cover,
                             width: 110,
                             height: 110,
@@ -191,7 +191,7 @@ class AvatarTabState extends State<AvatarTab> {
                             });
                           },
                           child: Ink.image(
-                            image: AssetImage('assets/body2.png'),
+                            image: AssetImage('assets/s2.png'),
                             // fit: BoxFit.cover,
                             width: 110,
                             height: 110,
@@ -213,7 +213,7 @@ class AvatarTabState extends State<AvatarTab> {
                             });
                           },
                           child: Ink.image(
-                            image: AssetImage('assets/body3.png'),
+                            image: AssetImage('assets/s3.png'),
                             // fit: BoxFit.cover,
                             width: 110,
                             height: 110,
@@ -235,7 +235,7 @@ class AvatarTabState extends State<AvatarTab> {
                             });
                           },
                           child: Ink.image(
-                            image: AssetImage('assets/body4.png'),
+                            image: AssetImage('assets/s4.png'),
                             // fit: BoxFit.cover,
                             width: 110,
                             height: 110,
