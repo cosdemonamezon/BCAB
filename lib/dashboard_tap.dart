@@ -1,5 +1,8 @@
 import 'package:BCAB/avatar_tab.dart';
+import 'package:BCAB/news_tab.dart';
 import 'package:BCAB/songs_tab.dart';
+import 'package:BCAB/stadium.dart';
+import 'package:BCAB/reward_tab.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:BCAB/main.dart';
@@ -275,7 +278,7 @@ Card makeDashboardItem(String title, IconData icon, int page, context) {
         onTap: () {
           if (page == 1) {
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Dashboard()));
+                context, MaterialPageRoute(builder: (context) => AvatarTab()));
           } else if (page == 2) {
             Navigator.push(
                 context, MaterialPageRoute(builder: (context) => AvatarTab()));
@@ -284,16 +287,16 @@ Card makeDashboardItem(String title, IconData icon, int page, context) {
                 context, MaterialPageRoute(builder: (context) => SongsTab()));
           } else if (page == 4) {
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Dashboard()));
+                context, MaterialPageRoute(builder: (context) => NewsTab()));
           } else if (page == 5) {
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Dashboard()));
+                context, MaterialPageRoute(builder: (context) => Reward()));
           } else if (page == 6) {
             Navigator.push(
                 context, MaterialPageRoute(builder: (context) => Dashboard()));
           } else if (page == 7) {
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Dashboard()));
+                context, MaterialPageRoute(builder: (context) => Stadium()));
           } else if (page == 8) {
             Navigator.push(
                 context, MaterialPageRoute(builder: (context) => Dashboard()));
