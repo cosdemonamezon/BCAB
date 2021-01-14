@@ -12,6 +12,7 @@ import 'profile_tab.dart';
 import 'settings_tab.dart';
 import 'songs_tab.dart';
 import 'avatar_tab.dart';
+import 'wallet_tab.dart';
 import 'widgets.dart';
 import 'login_page.dart';
 
@@ -281,13 +282,13 @@ Card makeDashboardItem(String title, IconData icon, int page, context) {
                 context, MaterialPageRoute(builder: (context) => AvatarTab()));
           } else if (page == 2) {
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => AvatarTab()));
+                context, MaterialPageRoute(builder: (context) => WalletTab()));
           } else if (page == 3) {
             Navigator.push(
                 context, MaterialPageRoute(builder: (context) => SongsTab()));
           } else if (page == 4) {
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => NewsTab()));
+                context, MaterialPageRoute(builder: (context) => Stadium()));
           } else if (page == 5) {
             Navigator.push(
                 context, MaterialPageRoute(builder: (context) => Reward()));
@@ -296,7 +297,7 @@ Card makeDashboardItem(String title, IconData icon, int page, context) {
                 context, MaterialPageRoute(builder: (context) => Dashboard()));
           } else if (page == 7) {
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Stadium()));
+                context, MaterialPageRoute(builder: (context) => NewsTab()));
           } else if (page == 8) {
             Navigator.push(
                 context, MaterialPageRoute(builder: (context) => Dashboard()));

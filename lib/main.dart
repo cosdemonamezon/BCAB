@@ -7,6 +7,7 @@ import 'profile_tab.dart';
 import 'settings_tab.dart';
 import 'songs_tab.dart';
 import 'avatar_tab.dart';
+import 'wallet_tab.dart';
 import 'widgets.dart';
 import 'login_page.dart';
 

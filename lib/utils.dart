@@ -7,16 +7,16 @@ import 'package:flutter/material.dart';
 // This file has a number of platform-agnostic non-Widget utility functions.
 
 const _myListOfRandomColors = [
-  Colors.red,
-  Colors.blue,
-  Colors.teal,
-  Colors.yellow,
-  Colors.amber,
-  Colors.deepOrange,
-  Colors.green,
-  Colors.indigo,
-  Colors.lime,
-  Colors.pink,
+  // Colors.red,
+  // Colors.blue,
+  // Colors.teal,
+  // Colors.yellow,
+  // Colors.amber,
+  // Colors.deepOrange,
+  // Colors.green,
+  // Colors.indigo,
+  // Colors.lime,
+  // Colors.pink,
   Colors.orange,
 ];
 
@@ -29,7 +29,7 @@ final wordPairIterator = generateWordPairs();
 String generateRandomHeadline() {
   final artist = capitalizePair(wordPairIterator.first);
 
-  switch (_random.nextInt(10)) {
+  switch (_random.nextInt(1)) {
     case 0:
       return '$artist says ${nouns[_random.nextInt(nouns.length)]}';
     case 1:

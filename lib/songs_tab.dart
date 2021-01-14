@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -19,9 +21,19 @@ class SongsTab extends StatefulWidget {
   _SongsTabState createState() => _SongsTabState();
 }
 
+const _myListOfRandomSport = [
+  'archery',
+  'badminton',
+  'baseball',
+  'basketball',
+  'BMX racing',
+  'boxing',
+  'chess',
+  'Rubby',
+];
+
 class _SongsTabState extends State<SongsTab> {
   static const _itemsLength = 50;
-
   final _androidRefreshKey = GlobalKey<RefreshIndicatorState>();
 
   List<MaterialColor> colors;
@@ -54,22 +66,22 @@ class _SongsTabState extends State<SongsTab> {
     final color = defaultTargetPlatform == TargetPlatform.iOS
         ? colors[index]
         : colors[index].shade400;
-
+    Random random = new Random();
     return SafeArea(
       top: false,
       bottom: false,
       child: Hero(
         tag: index,
         child: HeroAnimatingSongCard(
-          song: songNames[index],
-          color: color,
+          song: _myListOfRandomSport[random.nextInt(7)],
+          color: Colors.white,
           heroAnimation: AlwaysStoppedAnimation(0),
           onPressed: () => Navigator.of(context).push<void>(
             MaterialPageRoute(
               builder: (context) => SongDetailTab(
                 id: index,
-                song: songNames[index],
-                color: color,
+                song: _myListOfRandomSport[random.nextInt(7)],
+                color: Colors.white,
               ),
             ),
           ),
@@ -115,10 +127,10 @@ class _SongsTabState extends State<SongsTab> {
             icon: Icon(Icons.refresh),
             onPressed: () async => await _androidRefreshKey.currentState.show(),
           ),
-          IconButton(
-            icon: Icon(Icons.shuffle),
-            onPressed: _togglePlatform,
-          ),
+          // IconButton(
+          //   icon: Icon(Icons.shuffle),
+          //   onPressed: _togglePlatform,
+          // ),
         ],
       ),
       drawer: widget.androidDrawer,

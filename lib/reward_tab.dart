@@ -47,7 +47,8 @@ class _RewardState extends State<Reward> {
                 CircleAvatar(
                   radius: 50,
                   backgroundColor: Colors.white,
-                  child: Image(image: AssetImage("assets/g1.jpg"), fit: BoxFit.fill),
+                  child: Image(
+                      image: AssetImage("assets/g1.jpg"), fit: BoxFit.fill),
                   // child: Text(
                   //   titles[index].substring(0, 1),
                   //   style: TextStyle(color: Colors.white),
@@ -79,7 +80,7 @@ class _RewardState extends State<Reward> {
       ),
     );
   }
-  
+
   final List<Tab> myTabs = <Tab>[
     Tab(text: 'History'),
     Tab(text: 'Items'),
@@ -104,76 +105,6 @@ class _RewardState extends State<Reward> {
               ),
             );
           }).toList(),
-        ),
-        
-        bottomNavigationBar: Container(
-          height: 100,
-          width: double.infinity,
-          decoration: BoxDecoration(color: Colors.green),
-          child: Padding(
-            padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 15.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Column(
-                  children: [
-                    CircleAvatar(
-                      //backgroundImage: AssetImage(pathicon1),
-                      radius: 24,
-                      child: IconButton(
-                          icon: Icon(Icons.home_work), onPressed: () {}),
-                    ),
-                    Text(
-                      "Home",
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                  ],
-                ),
-                Column(
-                  children: [
-                    CircleAvatar(
-                      //backgroundImage: AssetImage(pathicon1),
-                      radius: 24,
-                      child: IconButton(
-                          icon: Icon(Icons.drag_indicator), onPressed: () {}),
-                    ),
-                    Text(
-                      "Basket",
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                  ],
-                ),
-                Column(
-                  children: [
-                    CircleAvatar(
-                      //backgroundImage: AssetImage(pathicon1),
-                      radius: 24,
-                      child: IconButton(
-                          icon: Icon(Icons.gamepad_sharp), onPressed: () {}),
-                    ),
-                    Text(
-                      "Notification",
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                  ],
-                ),
-                Column(
-                  children: [
-                    CircleAvatar(
-                      //backgroundImage: AssetImage(pathicon1),
-                      radius: 24,
-                      child: IconButton(
-                          icon: Icon(Icons.battery_std_sharp), onPressed: () {}),
-                    ),
-                    Text(
-                      "Setting",
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
         ),
       ),
     );
