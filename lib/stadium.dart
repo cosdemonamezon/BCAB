@@ -75,23 +75,14 @@ class _StadiumState extends State<Stadium> {
                 ],
               ),
             ),
-            // Row(
-            //   mainAxisAlignment: MainAxisAlignment.spaceAround,
-            //   children: [
-            //     buildContainer('assets/t1.jpg'),
-            //     buildContainer('assets/t1.jpg'),
-            //     buildContainer('assets/t1.jpg'),
-            //     buildContainer('assets/t1.jpg'),
-            //     buildContainer('assets/t1.jpg'),
-            //   ],
-            // ),
+            
           ],
         ),
       ),
     );
   }
 
-  Container buildContainer(String title,String image) {
+  Container buildContainer(String title, String image) {
     return Container(
       //color: Colors.red,
       width: 70,
