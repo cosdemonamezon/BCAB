@@ -31,6 +31,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.0
   flutter_swiper: ^1.1.6
+  flutter_svg: ^0.19.1
 
 dev_dependencies:
   flutter_test:
@@ -49,27 +50,7 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/logo.png
-    - assets/alucard.jpg
-    - assets/h1.png
-    - assets/h2.png
-    - assets/h3.png
-    - assets/head1.png
-    - assets/head2.png
-    - assets/head3.png
-    - assets/head4.png
-    - assets/sh1.png
-    - assets/sh2.png
-    - assets/sh3.png
-    - assets/body1.png
-    - assets/body2.png
-    - assets/body3.png
-    - assets/body4.png
-    - assets/v1.jpg
-    - assets/v2.jpg
-    - assets/v3.jpg
-    - assets/v4.jpg
-    - assets/v5.jpg
+    - assets/
 
   # To add assets to your application, add an assets section, like this:
   # assets:

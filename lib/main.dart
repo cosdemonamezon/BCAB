@@ -23,7 +23,13 @@ class MyApp extends StatelessWidget {
       title: 'BCAB',
       theme: ThemeData(
         // Use the green theme for Material widgets.
-        primarySwatch: Colors.green,
+        primaryColor: Color(0xFFb58d08),
+
+        /**
+       * ... [The rest of your config here] ...
+       */
+
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       darkTheme: ThemeData.dark(),
       builder: (context, child) {
@@ -120,7 +126,7 @@ class _PlatformAdaptingHomePageState extends State<PlatformAdaptingHomePage> {
               defaultTitle: ProfileTab.title,
               builder: (context) => AvatarTab(),
             );
-           
+
           default:
             assert(false, 'Unexpected tab');
             return null;
@@ -160,9 +166,9 @@ class _AndroidDrawer extends StatelessWidget {
             leading: Icon(Icons.dashboard),
             title: Text("Dashboard"),
             onTap: () {
-              //Navigator.pop(context);
+              Navigator.pop(context);
               Navigator.push(context,
-                MaterialPageRoute(builder: (context) => Dashboard()));
+                  MaterialPageRoute(builder: (context) => Dashboard()));
             },
           ),
           ListTile(
