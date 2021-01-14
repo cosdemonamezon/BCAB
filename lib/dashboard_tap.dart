@@ -1,5 +1,6 @@
 import 'package:BCAB/avatar_tab.dart';
 import 'package:BCAB/songs_tab.dart';
+import 'package:BCAB/stadium.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 
@@ -181,7 +182,7 @@ Card makeDashboardItem(String title, IconData icon, int page, context) {
                 context, MaterialPageRoute(builder: (context) => Dashboard()));
           } else if (page == 7) {
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Dashboard()));
+                context, MaterialPageRoute(builder: (context) => Stadium()));
           } else if (page == 8) {
             Navigator.push(
                 context, MaterialPageRoute(builder: (context) => Dashboard()));
