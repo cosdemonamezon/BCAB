@@ -1,3 +1,4 @@
+import 'package:BCAB/dashboard_tap.dart';
 import 'package:flutter/material.dart';
 import 'package:BCAB/main.dart';
 import 'main.dart';
@@ -59,7 +60,7 @@ class _LoginPageState extends State<LoginPage> {
           Navigator.push<void>(
               context,
               MaterialPageRoute(
-                  builder: (context) => PlatformAdaptingHomePage()));
+                  builder: (context) => Dashboard()));
         },
         padding: EdgeInsets.all(15),
         color: Colors.green,

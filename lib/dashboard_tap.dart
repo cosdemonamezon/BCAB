@@ -49,14 +49,17 @@ class _DashboardState extends State<Dashboard> {
               child: Container(
                 //color: Colors.black,
                 //height: double.infinity,
-                padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 58.0),
+                padding: EdgeInsets.symmetric(vertical: 25.0, horizontal: 20.0),
                 child: GridView.count(
-                  crossAxisCount: 2,
+                  crossAxisCount: 3,
                   padding: EdgeInsets.all(3.0),
                   children: [
                     makeDashboardItem("Avatar", Icons.book),
                     makeDashboardItem("Wallet", Icons.wallet_giftcard),
                     makeDashboardItem("Sports", Icons.sports),
+                    makeDashboardItem("Stadium", Icons.room_service),
+                    makeDashboardItem("Reward", Icons.recommend),
+                    makeDashboardItem("Events", Icons.event),
                     makeDashboardItem("Stadium", Icons.room_service),
                     makeDashboardItem("Reward", Icons.recommend),
                     makeDashboardItem("Events", Icons.event)
@@ -68,13 +71,13 @@ class _DashboardState extends State<Dashboard> {
         ),
       ),
       bottomNavigationBar: Container(
-        height: 90,
+        height: 100,
         width: double.infinity,
         decoration: BoxDecoration(
           color: Colors.green
         ),
         child: Padding(
-          padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+          padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 15.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -140,7 +143,7 @@ Card makeDashboardItem (String title, IconData icon, ) {
       borderRadius: BorderRadius.circular(20.0),
     ),
     elevation: 5.0,
-    margin: EdgeInsets.symmetric(vertical: 13.0, horizontal: 20.0),
+    margin: EdgeInsets.symmetric(vertical: 13.0, horizontal: 10.0),
     child: Container(
       decoration: BoxDecoration(
         color: Color.fromRGBO(220, 220, 220, 1.0),
@@ -153,7 +156,7 @@ Card makeDashboardItem (String title, IconData icon, ) {
           mainAxisSize: MainAxisSize.min,
           verticalDirection: VerticalDirection.down,
           children: [
-            SizedBox(height: 20.0),
+            SizedBox(height: 15.0),
             Center(
               child: Icon(
                 icon,
@@ -161,7 +164,7 @@ Card makeDashboardItem (String title, IconData icon, ) {
                 color: Colors.black,
               ),
             ),
-            SizedBox(height: 20.0),
+            SizedBox(height: 15.0),
             Center(
               child: Text(
                 title,
