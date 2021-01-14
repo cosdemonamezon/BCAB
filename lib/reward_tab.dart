@@ -40,16 +40,18 @@ class _RewardState extends State<Reward> {
         child: InkWell(
           onTap: defaultTargetPlatform == TargetPlatform.iOS ? null : () {},
           child: Padding(
-            padding: const EdgeInsets.all(12.0),
+            padding: const EdgeInsets.all(15.0),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CircleAvatar(
-                  backgroundColor: colors[index],
-                  child: Text(
-                    titles[index].substring(0, 1),
-                    style: TextStyle(color: Colors.white),
-                  ),
+                  radius: 50,
+                  backgroundColor: Colors.white,
+                  child: Image(image: AssetImage("assets/g1.jpg"), fit: BoxFit.fill),
+                  // child: Text(
+                  //   titles[index].substring(0, 1),
+                  //   style: TextStyle(color: Colors.white),
+                  // ),
                 ),
                 Padding(padding: EdgeInsets.only(left: 16)),
                 Expanded(
@@ -65,7 +67,7 @@ class _RewardState extends State<Reward> {
                       ),
                       Padding(padding: EdgeInsets.only(top: 8)),
                       Text(
-                        contents[index],
+                        contents[index].substring(0, 70),
                       ),
                     ],
                   ),
