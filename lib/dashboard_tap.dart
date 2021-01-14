@@ -27,22 +27,21 @@ class _DashboardState extends State<Dashboard> {
         width: double.infinity,
         child: Column(
           children: [
-            
-              Container(
-                width: double.infinity,
-                height: 180.0,
-                color: Colors.blueAccent,
-                child: Swiper(
-                  itemCount: imageList.length,
-                  pagination: SwiperPagination(),
-                  itemBuilder: (context, index){
-                    return Image(
-                      image: AssetImage(imageList[index]),
-                      fit: BoxFit.cover,
-                    );
-                  }
-                ),
+            Container(
+              width: double.infinity,
+              height: 180.0,
+              color: Colors.blueAccent,
+              child: Swiper(
+                itemCount: imageList.length,
+                pagination: SwiperPagination(),
+                itemBuilder: (context, index){
+                  return Image(
+                    image: AssetImage(imageList[index]),
+                    fit: BoxFit.cover,
+                  );
+                }
               ),
+            ),
             
             //SizedBox(height: 5.0,),
 
@@ -56,11 +55,11 @@ class _DashboardState extends State<Dashboard> {
                   padding: EdgeInsets.all(3.0),
                   children: [
                     makeDashboardItem("Avatar", Icons.book),
-                    makeDashboardItem("Alphabet", Icons.alarm),
-                    makeDashboardItem("Alphabet", Icons.alarm),
-                    makeDashboardItem("Alphabet", Icons.alarm),
-                    makeDashboardItem("Alphabet", Icons.alarm),
-                    makeDashboardItem("Alphabet", Icons.alarm)
+                    makeDashboardItem("Wallet", Icons.wallet_giftcard),
+                    makeDashboardItem("Sports", Icons.sports),
+                    makeDashboardItem("Stadium", Icons.room_service),
+                    makeDashboardItem("Reward", Icons.recommend),
+                    makeDashboardItem("Events", Icons.event)
                   ],
                 ),
               ),
@@ -74,81 +73,68 @@ class _DashboardState extends State<Dashboard> {
         decoration: BoxDecoration(
           color: Colors.green
         ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 5.0),
-              child: Column(
+        child: Padding(
+          padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Column(
                 children: [
                   CircleAvatar(
                     //backgroundImage: AssetImage(pathicon1),
-                    radius: 22,
-                    child: IconButton(icon: Icon(Icons.home_work), onPressed: (){}),
-                    
+                    radius: 24,
+                    child: IconButton(icon: Icon(Icons.home_work), onPressed: (){}),  
                   ),
                   Text(
-                      "ติดต่อเรา", style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
+                    "Home", style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
                 ],
               ),
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 5.0),
-              child: Column(
+              Column(
                 children: [
                   CircleAvatar(
                     //backgroundImage: AssetImage(pathicon1),
-                    radius: 22,
-                    child: IconButton(icon: Icon(Icons.drag_indicator), onPressed: (){}),
-                    
+                    radius: 24,
+                    child: IconButton(icon: Icon(Icons.drag_indicator), onPressed: (){}),  
                   ),
                   Text(
-                      "ติดต่อเรา", style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
+                    "Basket", style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
                 ],
               ),
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 5.0),
-              child: Column(
+              Column(
                 children: [
                   CircleAvatar(
                     //backgroundImage: AssetImage(pathicon1),
-                    radius: 22,
-                    child: IconButton(icon: Icon(Icons.gamepad_sharp), onPressed: (){}),
-                    
+                    radius: 24,
+                    child: IconButton(icon: Icon(Icons.gamepad_sharp), onPressed: (){}), 
                   ),
                   Text(
-                      "ติดต่อเรา", style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
+                    "Notification", style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
                 ],
               ),
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: 11.0, horizontal: 5.0),
-              child: Column(
+              Column(
                 children: [
                   CircleAvatar(
                     //backgroundImage: AssetImage(pathicon1),
-                    radius: 22,
-                    child: IconButton(icon: Icon(Icons.battery_std_sharp), onPressed: (){}),
-                    
+                    radius: 24,
+                    child: IconButton(icon: Icon(Icons.battery_std_sharp), onPressed: (){}), 
                   ),
                   Text(
-                      "ติดต่อเรา", style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
+                    "Setting", style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
                 ],
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
   }
 }
 
-Card makeDashboardItem(String title, IconData icon,) {
+Card makeDashboardItem (String title, IconData icon, ) {
   return Card(
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(20.0),

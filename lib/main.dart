@@ -120,11 +120,7 @@ class _PlatformAdaptingHomePageState extends State<PlatformAdaptingHomePage> {
               defaultTitle: ProfileTab.title,
               builder: (context) => AvatarTab(),
             );
-            case 3:
-            return CupertinoTabView(
-              defaultTitle: ProfileTab.title,
-              builder: (context) => Dashboard(),
-            );
+           
           default:
             assert(false, 'Unexpected tab');
             return null;
@@ -164,9 +160,9 @@ class _AndroidDrawer extends StatelessWidget {
             leading: Icon(Icons.dashboard),
             title: Text("Dashboard"),
             onTap: () {
-              Navigator.pop(context);
-              Navigator.push<void>(context,
-                  MaterialPageRoute(builder: (context) => Dashboard()));
+              //Navigator.pop(context);
+              Navigator.push(context,
+                MaterialPageRoute(builder: (context) => Dashboard()));
             },
           ),
           ListTile(
