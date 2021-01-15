@@ -1,11 +1,12 @@
 import 'package:BCAB/avatar_tab.dart';
+import 'package:BCAB/calendar_tab.dart';
 import 'package:BCAB/news_tab.dart';
 import 'package:BCAB/songs_tab.dart';
 import 'package:BCAB/stadium.dart';
 import 'package:BCAB/reward_tab.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
-import 'package:BCAB/main.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'news_tab.dart';
 import 'profile_tab.dart';
@@ -212,7 +213,10 @@ class _DashboardState extends State<Dashboard> {
                     child: IconButton(
                         color: Colors.white,
                         icon: Icon(Icons.phone),
-                        onPressed: () {}),
+                        onPressed: () {
+                          launch(('tel://0922568260'));
+                        }
+                    ),
                   ),
                   Text(
                     "contact us",
@@ -303,7 +307,7 @@ Card makeDashboardItem(String title, IconData icon, int page, context) {
                 context, MaterialPageRoute(builder: (context) => Dashboard()));
           } else if (page == 9) {
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Dashboard()));
+                context, MaterialPageRoute(builder: (context) => CalendarTab()));
           }
         },
         child: Column(
