@@ -72,7 +72,7 @@ class AvatarTabState extends State<AvatarTab> {
                               });
                             },
                             child: Ink.image(
-                              image: AssetImage('assets/s_h1.png'),
+                              image: AssetImage('assets/h1.png'),
                               // fit: BoxFit.cover,
                               width: 110,
                               height: 110,
@@ -93,7 +93,7 @@ class AvatarTabState extends State<AvatarTab> {
                             });
                           },
                           child: Ink.image(
-                            image: AssetImage('assets/s_h2.png'),
+                            image: AssetImage('assets/h2.png'),
                             // fit: BoxFit.cover,
                             width: 110,
                             height: 110,
@@ -115,7 +115,7 @@ class AvatarTabState extends State<AvatarTab> {
                             });
                           },
                           child: Ink.image(
-                            image: AssetImage('assets/s_h3.png'),
+                            image: AssetImage('assets/h3.png'),
                             // fit: BoxFit.cover,
                             width: 110,
                             height: 110,
@@ -137,7 +137,7 @@ class AvatarTabState extends State<AvatarTab> {
                             });
                           },
                           child: Ink.image(
-                            image: AssetImage('assets/s_h4.png'),
+                            image: AssetImage('assets/h4.png'),
                             // fit: BoxFit.cover,
                             width: 110,
                             height: 110,
@@ -169,7 +169,7 @@ class AvatarTabState extends State<AvatarTab> {
                             });
                           },
                           child: Ink.image(
-                            image: AssetImage('assets/s_s1.png'),
+                            image: AssetImage('assets/s1.png'),
                             // fit: BoxFit.cover,
                             width: 110,
                             height: 110,
@@ -191,7 +191,7 @@ class AvatarTabState extends State<AvatarTab> {
                             });
                           },
                           child: Ink.image(
-                            image: AssetImage('assets/s_s2.png'),
+                            image: AssetImage('assets/s2.png'),
                             // fit: BoxFit.cover,
                             width: 110,
                             height: 110,
@@ -213,7 +213,7 @@ class AvatarTabState extends State<AvatarTab> {
                             });
                           },
                           child: Ink.image(
-                            image: AssetImage('assets/s_s3.png'),
+                            image: AssetImage('assets/s3.png'),
                             // fit: BoxFit.cover,
                             width: 110,
                             height: 110,
@@ -235,7 +235,7 @@ class AvatarTabState extends State<AvatarTab> {
                             });
                           },
                           child: Ink.image(
-                            image: AssetImage('assets/s_s4.png'),
+                            image: AssetImage('assets/s4.png'),
                             // fit: BoxFit.cover,
                             width: 110,
                             height: 110,
