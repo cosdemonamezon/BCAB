@@ -10,10 +10,15 @@ class AvatarTabTwo extends StatefulWidget {
 class _AvatarTabTwoState extends State<AvatarTabTwo> {
   String h = '1';
   String sh = '1';
+  bool bth = true;
+  bool btb = false;
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Padding(
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Avatar"),
+      ),
+      body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: SingleChildScrollView(
           child: Column(
@@ -47,7 +52,11 @@ class _AvatarTabTwoState extends State<AvatarTabTwo> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   GestureDetector(
-                    onTap: (){},
+                    onTap: (){
+                      setState(() {
+                        bth = true;
+                      });
+                    },
                     child: Container(
                       //color: Colors.black,
                       height: 46,
@@ -64,7 +73,12 @@ class _AvatarTabTwoState extends State<AvatarTabTwo> {
                     ),
                   ),
                   GestureDetector(
-                    onTap: (){},
+                    onTap: (){
+                      setState(() {
+                        bth = false;
+                        btb = true;
+                      });
+                    },
                     child: Container(
                       //color: Colors.black,
                       height: 46,
@@ -104,37 +118,73 @@ class _AvatarTabTwoState extends State<AvatarTabTwo> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   GestureDetector(
-                    onTap: (){},
+                    onTap: (){
+                      setState(() {
+                        if (bth == true) {
+                          h = '1';
+                        } else if(btb == true){
+                          sh = '1';
+                        }else{
+
+                        }
+                      });
+                    },
                     child: Container(
                       height: 120,
                       width: 110,
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                          image: AssetImage("assets/nh1.PNG")
+                          image: bth == true ? AssetImage("assets/s_h1.png") 
+                          : btb == true ? AssetImage("assets/s_s1.png")
+                          : AssetImage("assets/nh2.PNG")
                         ),
                       ),
                     ),
                   ),
                   GestureDetector(
-                    onTap: (){},
+                    onTap: (){
+                      setState(() {
+                        if (bth == true) {
+                          h = '2';
+                        } else if(btb == true){
+                          sh = '2';
+                        }else{
+
+                        }
+                      });
+                    },
                     child: Container(
                       height: 120,
                       width: 110,
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                          image: AssetImage("assets/nh1.PNG")
+                          image: bth == true ? AssetImage("assets/s_h2.png") 
+                          : btb == true ? AssetImage("assets/s_s2.png")
+                          : AssetImage("assets/nh2.PNG")
                         ),
                       ),
                     ),
                   ),
                   GestureDetector(
-                    onTap: (){},
+                    onTap: (){
+                      setState(() {
+                        if (bth == true) {
+                          h = '3';
+                        } else if(btb == true){
+                          sh = '3';
+                        }else{
+
+                        }
+                      });
+                    },
                     child: Container(
                       height: 120,
                       width: 110,
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                          image: AssetImage("assets/nh1.PNG")
+                          image: bth == true ? AssetImage("assets/s_h3.png") 
+                          : btb == true ? AssetImage("assets/s_s3.png")
+                          : AssetImage("assets/nh2.PNG")
                         ),
                       ),
                     ),
@@ -146,37 +196,73 @@ class _AvatarTabTwoState extends State<AvatarTabTwo> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   GestureDetector(
-                    onTap: (){},
+                    onTap: (){
+                      setState(() {
+                        if (bth == true) {
+                          h = '4';
+                        } else if(btb == true){
+                          sh = '4';
+                        }else{
+
+                        }
+                      });
+                    },
                     child: Container(
                       height: 120,
                       width: 110,
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                          image: AssetImage("assets/nh2.PNG")
+                          image: bth == true ? AssetImage("assets/s_h4.png") 
+                          : btb == true ? AssetImage("assets/s_s4.png")
+                          : AssetImage("assets/nh2.PNG")
                         ),
                       ),
                     ),
                   ),
                   GestureDetector(
-                    onTap: (){},
+                    onTap: (){
+                      setState(() {
+                        if (bth == true) {
+                          h = '5';
+                        } else if(btb == true){
+                          sh = '5';
+                        }else{
+
+                        }
+                      });
+                    },
                     child: Container(
                       height: 120,
                       width: 110,
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                          image: AssetImage("assets/nh2.PNG")
+                          image: bth == true ? AssetImage("assets/s_h5.png") 
+                          : btb == true ? AssetImage("assets/s_s5.png")
+                          : AssetImage("assets/nh2.PNG")
                         ),
                       ),
                     ),
                   ),
                   GestureDetector(
-                    onTap: (){},
+                    onTap: (){
+                      setState(() {
+                        if (bth == true) {
+                          h = '6';
+                        } else if(btb == true){
+                          sh = '6';
+                        }else{
+
+                        }
+                      });
+                    },
                     child: Container(
                       height: 120,
                       width: 110,
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                          image: AssetImage("assets/nh2.PNG")
+                          image: bth == true ? AssetImage("assets/s_h6.png") 
+                          : btb == true ? AssetImage("assets/s_s6.png")
+                          : AssetImage("assets/nh2.PNG")
                         ),
                       ),
                     ),

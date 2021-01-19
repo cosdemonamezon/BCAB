@@ -111,10 +111,7 @@ class _StadiumState extends State<Stadium> {
                       margin: EdgeInsets.symmetric(
                           vertical: 10.0, horizontal: 10.0),
                       decoration: BoxDecoration(
-                        image: DecorationImage(image: AssetImage(numId[index]), fit: BoxFit.fill
-                            // clickpic == true && index == 0 ? AssetImage(pathName[1])
-                            // :AssetImage(pathName[0]), fit: BoxFit.fill
-                        ),
+                        image: DecorationImage(image: AssetImage(numId[index]), fit: BoxFit.fill),
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,

@@ -288,7 +288,7 @@ Card makeDashboardItem(String title, IconData icon, int page, context) {
         onTap: () {
           if (page == 1) {
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => AvatarTab()));
+                context, MaterialPageRoute(builder: (context) => AvatarTabTwo()));
           } else if (page == 2) {
             Navigator.push(
                 context, MaterialPageRoute(builder: (context) => WalletTab()));
