@@ -59,8 +59,8 @@ class _AvatarTabTwoState extends State<AvatarTabTwo> {
                     },
                     child: Container(
                       //color: Colors.black,
-                      height: 46,
-                      width: 110,
+                      height: 50,
+                      width: 160,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.grey[300],
@@ -81,8 +81,8 @@ class _AvatarTabTwoState extends State<AvatarTabTwo> {
                     },
                     child: Container(
                       //color: Colors.black,
-                      height: 46,
-                      width: 110,
+                      height: 50,
+                      width: 160,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.grey[300],
@@ -94,23 +94,7 @@ class _AvatarTabTwoState extends State<AvatarTabTwo> {
                       ),
                     ),
                   ),
-                  GestureDetector(
-                    onTap: (){},
-                    child: Container(
-                      //color: Colors.black,
-                      height: 46,
-                      width: 110,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.grey[300],
-                      ),
-                      child: Center(
-                        child: Text(
-                          "ขา", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.6, color: Colors.black),
-                        ),
-                      ),
-                    ),
-                  ),
+                  
                 ],
               ),
               SizedBox(height: 15.0,),
