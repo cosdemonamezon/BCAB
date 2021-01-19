@@ -1,3 +1,5 @@
+// import 'dart:html';
+
 import 'package:BCAB/avatar_tab.dart';
 import 'package:BCAB/avatar_tabtwo.dart';
 import 'package:BCAB/calendar_tab.dart';
@@ -15,6 +17,9 @@ import 'settings_tab.dart';
 import 'songs_tab.dart';
 import 'avatar_tab.dart';
 import 'wallet_tab.dart';
+import 'promotion_tab.dart';
+import 'events_tab.dart';
+import 'notification_tab.dart';
 import 'widgets.dart';
 import 'login_page.dart';
 
@@ -81,10 +86,34 @@ class _DashboardState extends State<Dashboard> {
                 title: Text(SongsTab.title),
                 onTap: () {
                   Navigator.pop(context);
+                  Navigator.push<void>(context,
+                      MaterialPageRoute(builder: (context) => SongsTab()));
                 },
               ),
               ListTile(
-                leading: NewsTab.androidIcon,
+                leading: Icon(Icons.room_service),
+                title: Text("Stadium"),
+                onTap: () {
+                  Navigator.pop(context);
+                  Navigator.push<void>(context,
+                      MaterialPageRoute(builder: (context) => Stadium()));
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.wallet_giftcard),
+                title: Text("Wallet"),
+                onTap: () {
+                  Navigator.pop(context);
+                  Navigator.push<void>(context,
+                      MaterialPageRoute(builder: (context) => WalletTab()));
+                },
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: Divider(),
+              ),
+              ListTile(
+                leading: Icon(Icons.new_releases),
                 title: Text(NewsTab.title),
                 onTap: () {
                   Navigator.pop(context);
@@ -93,12 +122,12 @@ class _DashboardState extends State<Dashboard> {
                 },
               ),
               ListTile(
-                leading: ProfileTab.androidIcon,
-                title: Text(ProfileTab.title),
+                leading: Icon(Icons.event),
+                title: Text("Events"),
                 onTap: () {
                   Navigator.pop(context);
                   Navigator.push<void>(context,
-                      MaterialPageRoute(builder: (context) => ProfileTab()));
+                      MaterialPageRoute(builder: (context) => EventsTab()));
                 },
               ),
               // Long drawer contents are often segmented.
@@ -220,8 +249,7 @@ class _DashboardState extends State<Dashboard> {
                         icon: Icon(Icons.phone),
                         onPressed: () {
                           launch(('tel://0922568260'));
-                        }
-                    ),
+                        }),
                   ),
                   Text(
                     "contact us",
@@ -238,7 +266,13 @@ class _DashboardState extends State<Dashboard> {
                     child: IconButton(
                         color: Colors.white,
                         icon: Icon(Icons.notification_important),
-                        onPressed: () {}),
+                        onPressed: () {
+                          // Navigator.pop(context);
+                          Navigator.push<void>(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => NotificationTab()));
+                        }),
                   ),
                   Text(
                     "Notification",
@@ -255,7 +289,13 @@ class _DashboardState extends State<Dashboard> {
                     child: IconButton(
                         color: Colors.white,
                         icon: Icon(Icons.settings),
-                        onPressed: () {}),
+                        onPressed: () {
+                          // Navigator.pop(context);
+                          Navigator.push<void>(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => SettingsTab()));
+                        }),
                   ),
                   Text(
                     "Setting",
@@ -303,16 +343,16 @@ Card makeDashboardItem(String title, IconData icon, int page, context) {
                 context, MaterialPageRoute(builder: (context) => Reward()));
           } else if (page == 6) {
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Dashboard()));
+                context, MaterialPageRoute(builder: (context) => EventsTab()));
           } else if (page == 7) {
             Navigator.push(
                 context, MaterialPageRoute(builder: (context) => NewsTab()));
           } else if (page == 8) {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Dashboard()));
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => PromotionTab()));
           } else if (page == 9) {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => CalendarTab()));
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => CalendarTab()));
           }
         },
         child: Column(
