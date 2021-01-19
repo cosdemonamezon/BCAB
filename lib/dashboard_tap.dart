@@ -1,6 +1,7 @@
 // import 'dart:html';
 
 import 'package:BCAB/avatar_tab.dart';
+import 'package:BCAB/avatar_tabtwo.dart';
 import 'package:BCAB/calendar_tab.dart';
 import 'package:BCAB/news_tab.dart';
 import 'package:BCAB/songs_tab.dart';
@@ -222,9 +223,13 @@ class _DashboardState extends State<Dashboard> {
                     //backgroundImage: AssetImage(pathicon1),
                     radius: 24,
                     child: IconButton(
-                        color: Colors.white,
-                        icon: Icon(Icons.home_work),
-                        onPressed: () {}),
+                      color: Colors.white,
+                      icon: Icon(Icons.home_work),
+                      onPressed: () {
+                        Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => AvatarTabTwo()));
+                      }
+                    ),
                   ),
                   Text(
                     "Home",
