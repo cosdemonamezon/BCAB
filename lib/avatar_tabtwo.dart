@@ -258,37 +258,73 @@ class _AvatarTabTwoState extends State<AvatarTabTwo> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   GestureDetector(
-                    onTap: (){},
+                     onTap: (){
+                      setState(() {
+                        if (bth == true) {
+                          h = '6';
+                        } else if(btb == true){
+                          sh = '6';
+                        }else{
+
+                        }
+                      });
+                    },
                     child: Container(
                       height: 120,
                       width: 110,
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                          image: AssetImage("assets/nh2.PNG")
+                          image: bth == true ? AssetImage("assets/s_h6.png") 
+                          : btb == true ? AssetImage("assets/s_s6.png")
+                          : AssetImage("assets/nh2.PNG")
                         ),
                       ),
                     ),
                   ),
                   GestureDetector(
-                    onTap: (){},
+                     onTap: (){
+                      setState(() {
+                        if (bth == true) {
+                          h = '6';
+                        } else if(btb == true){
+                          sh = '6';
+                        }else{
+
+                        }
+                      });
+                    },
                     child: Container(
                       height: 120,
                       width: 110,
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                          image: AssetImage("assets/nh2.PNG")
+                          image: bth == true ? AssetImage("assets/s_h6.png") 
+                          : btb == true ? AssetImage("assets/s_s6.png")
+                          : AssetImage("assets/nh2.PNG")
                         ),
                       ),
                     ),
                   ),
                   GestureDetector(
-                    onTap: (){},
+                     onTap: (){
+                      setState(() {
+                        if (bth == true) {
+                          h = '6';
+                        } else if(btb == true){
+                          sh = '6';
+                        }else{
+
+                        }
+                      });
+                    },
                     child: Container(
                       height: 120,
                       width: 110,
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                          image: AssetImage("assets/nh2.PNG")
+                          image: bth == true ? AssetImage("assets/s_h6.png") 
+                          : btb == true ? AssetImage("assets/s_s6.png")
+                          : AssetImage("assets/nh2.PNG")
                         ),
                       ),
                     ),
