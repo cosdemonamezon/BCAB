@@ -20,6 +20,7 @@ import 'wallet_tab.dart';
 import 'promotion_tab.dart';
 import 'events_tab.dart';
 import 'notification_tab.dart';
+import 'chat_tab.dart';
 import 'widgets.dart';
 import 'login_page.dart';
 
@@ -180,7 +181,13 @@ class _DashboardState extends State<Dashboard> {
 
             Expanded(
               child: Container(
-                color: Color(0xFFededed),
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("assets/bg_dash1.png"),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                // color: Color(0xFFededed),
                 //height: double.infinity,
                 padding: EdgeInsets.symmetric(vertical: 25.0, horizontal: 20.0),
                 child: GridView.count(
@@ -223,16 +230,17 @@ class _DashboardState extends State<Dashboard> {
                     //backgroundImage: AssetImage(pathicon1),
                     radius: 24,
                     child: IconButton(
-                      color: Colors.white,
-                      icon: Icon(Icons.home_work),
-                      onPressed: () {
-                        Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => AvatarTabTwo()));
-                      }
-                    ),
+                        color: Colors.white,
+                        icon: Icon(Icons.chat),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ChatTab()));
+                        }),
                   ),
                   Text(
-                    "Home",
+                    "Chat",
                     style: TextStyle(
                         fontWeight: FontWeight.bold, color: Colors.white),
                   ),
@@ -327,8 +335,8 @@ Card makeDashboardItem(String title, IconData icon, int page, context) {
       child: new InkWell(
         onTap: () {
           if (page == 1) {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => AvatarTabTwo()));
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => AvatarTabTwo()));
           } else if (page == 2) {
             Navigator.push(
                 context, MaterialPageRoute(builder: (context) => WalletTab()));

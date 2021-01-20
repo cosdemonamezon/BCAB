@@ -134,13 +134,23 @@ class _EventsTabState extends State<EventsTab> {
         ],
       ),
       drawer: widget.androidDrawer,
-      body: RefreshIndicator(
-        key: _androidRefreshKey,
-        onRefresh: _refreshData,
-        child: ListView.builder(
-          padding: EdgeInsets.symmetric(vertical: 12),
-          itemBuilder: _listBuilder,
-        ),
+      body: Stack(
+        children: <Widget>[
+          Image.asset(
+            "assets/bg.jpg",
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
+            fit: BoxFit.cover,
+          ),
+          RefreshIndicator(
+            key: _androidRefreshKey,
+            onRefresh: _refreshData,
+            child: ListView.builder(
+              padding: EdgeInsets.symmetric(vertical: 12),
+              itemBuilder: _listBuilder,
+            ),
+          ),
+        ],
       ),
     );
   }
